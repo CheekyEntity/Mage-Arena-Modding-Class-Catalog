@@ -3,7 +3,9 @@
 This repository documents decompiled Mage Arena classes and organizes them into categories useful for modding.
 
 ## Version
-These classes were extracted from Mage Arena Version 0.7.6 ROCK. Please note that they may change in future versions and would need to be updated.
+These classes were extracted from Mage Arena Version 0.7.8. Please note that they may change in future versions and would need to be updated.
+
+For changes from previous versions, see [VERSION_CHANGES_0.7.6_to_0.7.8.md](VERSION_CHANGES_0.7.6_to_0.7.8.md).
 
 ## Why this exists
 - This list was made to help with creating mods for Mage Arena.
@@ -16,11 +18,12 @@ These classes were extracted from Mage Arena Version 0.7.6 ROCK. Please note tha
 - BootstrapManager, BootstrapNetworkManager, MainMenuManager, MainMenuManagerNetworked, ResourceManager, SettingsHolder
 - FindPublicLobbies, LobbyDataEntry, ShowLobbyCode
 - EnableMeshRenderers, ToggleDungeonMeshRenders, SceneHDRPSettingsSetter, SetUpModelProvider
+- AiMAgeBook, BlockEditorEntry, BlockListEditor, Colorblindness, CustomizeHighlightColor
 
 ### Player Systems
 - PlayerMovement, PlayerRespawnManager, PlayerInventory, PlayerInteract, PlayerMapIconController
 - PlayerAudioPlayer, PlayerVolumeSettingsController, PushtoTalk, NameTagDistanceCulling
-- VoiceControlListener, RenableCursorOnMenus
+- VoiceControlListener, RenableCursorOnMenus, RaycastAudioDamper
 
 ### Progression and Items
 - ItemSpawner, SpawnNetworkedItem, ChestInteract, ChestInteract1, ChestNetController, ChestNetController1
@@ -37,18 +40,18 @@ These classes were extracted from Mage Arena Version 0.7.6 ROCK. Please note tha
 - DartController, DartGunController, DarkBlastController, FrostBoltController
 - LightningBoltSpellController, LightningBoltDamage, LightningLookAt, HolyLightSpell
 - RockSpellController, RockController, RockCheckSphere, ExplosionController
-- SmokeCloud, SmokeRingController, SwordController, TorchController
+- SmokeCloud, SmokeRingController, SwordController, TorchController, FrogBladeController, FrogSpear, MushroomSword
 - TorchHitDetection, WeaponHitDetection, WormholeTele, RespawnWormhole
-- FreezeHitController, ShrinkRay
+- FreezeHitController, ShrinkRay, SpellDarkBlast, SpellHolyLight, SpellRock, SpellWisp
 
 ### AI and NPCs
 - ShadowWizardAI, ShadowWizardAnimationController, SkelemageController, SkelemageAniController
 - SkeletoneController, SkeletoneBodyPart, GolemController, GolemGuyAdder
 - BoneDogController, BoneDogTargets, BogFrogController, BogFrogSingleController, BogFrogInteractor, SporeFrog
 - SoupManController, SoupManInteractor, DuendeManager, DuendeController, DuendeInteractor, DuendeRagdollAudio
-- MushroomGuyController, MushroomManTrigger, FallenKnight, FallenKnightNet, CastleWraithController
+- MushroomGuyController, MushroomManTrigger, FallenKnight, FallenKnightNet, CastleWraithController, LackyController
 - RavenController, RavenSpawner, NpcOpenDoor, MonsterHitScript
-- AINodes, DungeonPathfinder2D, GetHexAiNodes, GetShadowWizardController
+- AINodes, DungeonPathfinder2D, GetHexAiNodes, GetShadowWizardController, SpineSyncer
 
 ### World and Environment
 - DungeonGenerator, Generator2D, Grid, Grid2D, Delaunay2D
@@ -62,16 +65,16 @@ These classes were extracted from Mage Arena Version 0.7.6 ROCK. Please note tha
 
 ### Interactables and Props
 - ActivateSwizards, BookController, cinemamode, CleetedWalkingStickController
-- CrystalReactor, CrystalShard, CrystalSoup, FrogItem, FungalWalkingStick
+- CrystalReactor, CrystalShard, CrystalSoup, FrogItem, FungalWalkingStick, FrogBalloon
 - GetEntrancePoint, GetMap, GetPlayerGameobject, GetRespPortal, GetRockPlayerOwner, GetSoupFromGuy
-- LookatCam, LookatCamera, MagicMirrorController, OrbController
+- LookatCam, LookatCamera, MagicMirrorController, OrbController, PotInteract
 - PerfectedCrystal, PicSwapper, PipeItem, Prim, RoomPrefabEnabler
 - SetLabelMic, SetSenseText, SpikeGrower, SpikedRootController, SyncHandPos
-- ThrummingStoneController, TitleLetterShake, ToggleDungeonMeshRenders, WalkingStickController, WispController
+- ThrummingStoneController, TitleLetterShake, ToggleDungeonMeshRenders, WalkingStickController, WispController, DethRobeRaycaster
 
 ### UI and UX
 - NetHudCanvasHider, MapCGFader, MenuThemeVolumeUpper, HealthBarLerper, KillFeedMessage
-- SetChatMessage, ShowLobbyCode, showcheckmark, NameTagDistanceCulling
+- SetChatMessage, ShowLobbyCode, showcheckmark, NameTagDistanceCulling, debugmush, PixelArtDrawingSystem
 
 ### Samples and Editor/Demo
 - SamplesShowcase, SampleShowcase, FullscreenSamplesEffectSelection
@@ -100,7 +103,7 @@ These classes were extracted from Mage Arena Version 0.7.6 ROCK. Please note tha
 ### Voice and Audio Integration
 - DissonanceMicSource, DissonanceProcessAudio, DissonanceSource, DissonanceSpeechSource
 - Recognissimo sample scenes: VoiceControlExample, VoiceActivityDetectorExample, SpeechRecognizerExample
-- Gameplay.VoiceChat.CustomDissonancePlayer
+- Gameplay.VoiceChat.CustomDissonancePlayer, RaycastAudioDamper
 
 ## Ignore: Compiler-Generated Types
 Do not patch compiler-generated iterator/state-machine classes. Match with these glob-like patterns:
@@ -115,6 +118,7 @@ Examples: `PlayerMovement.<TelePlayer>d__154`, `SettingsHolder.<>c`.
 
 ## Contributions
 - CheekyEntity - Initial Catalog
+- CheekyEntity - Updated to 0.7.8
 
 ## License
 MIT
